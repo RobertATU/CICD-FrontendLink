@@ -20,4 +20,7 @@ public class PinsService {
     public List<Pins> allPins() {
         return databaseClient.findAll();
     }
+
+    public Pins deletePin(String sheepId) {return databaseClient.deleteBySheepId(sheepId);
+    }
 }
