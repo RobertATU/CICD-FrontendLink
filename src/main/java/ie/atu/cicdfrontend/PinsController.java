@@ -20,6 +20,10 @@ public class PinsController {
         return pinsService.allPins();
     }
 
+    @GetMapping("/test")
+    public String testPins(){
+        return "ok";
+    }
 
     @PostMapping("/createPin")
     public ResponseEntity<String> create(@Valid @RequestBody Pins pins){

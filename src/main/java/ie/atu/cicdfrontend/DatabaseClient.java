@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(name = "db-link",url = "http://localhost:8081/pins")
+@FeignClient(name = "db-link",url = "${feign.url}")
 public interface DatabaseClient {
     @PostMapping("/createPin")
     Void createPin(@RequestBody Pins pins);
