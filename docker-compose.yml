@@ -2,21 +2,21 @@ version: '3.8'
 
 services:
   frontend-link:
-    image: frontend-link:latest
+    image: robertmuldoon/frontend-link:latest
     ports:
       - "8080:8080"
     networks:
       - my_network
 
   db-link:
-    image: backend-link:latest
+    image: robertmuldoon/backend-link:latest
     ports:
       - "8081:8081"
     networks:
       - my_network
 
   map-frontend:
-    image: map_frontend:latest
+    image: robertmuldoon/map_frontend:latest
     ports:
       - "3000:3000"
     networks:
